@@ -2,6 +2,26 @@
 
 Tài liệu này ghi lại hướng tiếp cận đã bàn cho dự án chuyển đổi RPG fixed column trên IBM i / AS400 sang Java và IBM DB2 SQL. Trong dự án này, logic nghiệp vụ được ưu tiên chuyển sang SQL khi có thể, nhưng vẫn cần Java cho các phần procedural, orchestration, validation, hoặc những logic không phù hợp để viết bằng set-based SQL.
 
+## Thứ tự đọc tài liệu
+
+Nên đọc tài liệu trong repo theo thứ tự sau:
+
+1. [README.md](README.md)
+
+   Đọc trước để nắm mục tiêu migration, workflow tổng thể, vai trò của từng phase và quan điểm dùng LLM trong dự án.
+
+2. [sub-agent-research.md](sub-agent-research.md)
+
+   Đọc tiếp để hiểu cách chia sub-agent theo từng phase, input/output artifact, rủi ro của từng agent và nguyên tắc giao tiếp qua structured artifact/schema.
+
+3. [sub-agent-implementation-guide.md](sub-agent-implementation-guide.md)
+
+   Đọc sau khi đã hiểu kiến trúc. File này ghi step-by-step cách dùng Claude Code/Codex để tạo agent, schema, implementation, test và checkpoint cho từng phase.
+
+4. [post-implementation-roadmap.md](post-implementation-roadmap.md)
+
+   Đọc sau khi implementation pipeline đã xong. File này ghi các bước kiểm chứng, pilot, golden master testing, SQL review, feedback loop và batch migration.
+
 ## Workflow ban đầu
 
 Workflow được đề xuất ban đầu:
